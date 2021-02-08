@@ -1,0 +1,103 @@
+{% load static %}
+<!doctype html>
+<html lang="en" class="fullscreen-bg">
+
+<head>
+	<title>{% block title %}  {% endblock %} - InstaWin</title>
+	<meta charset="utf-8">
+	<meta http-equiv="refresh" content="5" >
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<!-- VENDOR CSS -->
+	<link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/vendor/font-awesome/css/font-awesome.min.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/vendor/linearicons/style.css' %}">
+	<!-- MAIN CSS -->
+	<link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
+	<!-- FOR DEMO PURPOSES ONLY. You should remove this in your project -->
+	<link rel="stylesheet" href="{% static 'assets/css/demo.css' %}">
+	<!-- GOOGLE FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+	<!-- ICONS -->
+	<link rel="apple-touch-icon" sizes="76x76" href="{% static 'assets/img/apple-icon.png' %}">
+	<link rel="icon" type="image/png" sizes="96x96" href="{% static 'assets/img/favicon.png' %}">
+
+	<!-- VENDOR CSS -->
+	<link rel="stylesheet" href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/vendor/chartist/css/chartist-custom.css' %}">
+</head>
+
+<body>
+
+<!-- WRAPPER -->
+<div id="wrapper">
+	<!-- Navbar -->
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="brand">
+			<a href="index.html"><img src="{% static 'assets/img/logo.png' %}" alt="INSTAWIN" style="height:auto; width:11rem;" class="img-responsive logo"></a>
+		</div>
+
+		<div class="container-fluid">
+			<div class="navbar-btn">
+				<button type="button" class="btn-toggle-fullwidth"><i class="lnr lnr-arrow-left-circle"></i></button>
+			</div>
+		</div>
+	</nav>
+	<!-- END NAVBAR -->
+
+	<!-- LEFT SIDEBAR -->
+	<div id="sidebar-nav" class="sidebar">
+		<div class="sidebar-scroll">
+			<nav>
+				<ul class="nav">
+					<li>
+						<a href="index.html" class="active"><i class="lnr lnr-home"></i> <span>Dashboard</span></a>
+					</li>
+					<li>
+						<a href="elements.html" class=""><i class="lnr lnr-users"></i> <span>Users</span></a>
+					</li>
+					<li>
+						<a href="charts.html" class=""><i class="lnr lnr-alarm"></i> <span>Send Notifications</span></a>
+					</li>
+					<li>
+						<a href="panels.html" class=""><i class="lnr lnr-cog"></i> <span>Transactions</span></a>
+					</li>
+					<li>
+						<a href="notifications.html" class=""><i class="lnr lnr-drop"></i> <span>Color Game</span></a>
+					</li>
+
+					<li>
+						<a href="tables.html" class=""><i class="lnr lnr-dice"></i> <span>Number & Picture Game</span></a>
+					</li>
+
+                    <li>
+						<a href="typography.html" class=""><i class="lnr lnr-text-format"></i> <span>App Version</span></a>
+					</li>
+
+                    <li>
+						<a  href="typography.html" class=""><i class="lnr lnr-exit"></i> <span>Logout</span></a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<!-- END LEFT SIDEBAR -->
+
+	{% block body %}
+
+	{% endblock %}
+
+</div>
+<!-- END WRAPPER -->
+<!-- Javascript -->
+	<script src="{% static 'assets/vendor/jquery/jquery.min.js' %}"></script>
+	<script src="{% static 'assets/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js' %}"></script>
+	<script src="{% static 'assets/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js' %}"></script>
+	<script src="{% static 'assets/vendor/chartist/js/chartist.min.js' %}"></script>
+	<script src="{% static 'assets/scripts/klorofil-common.js' %}"></script>
+	<script>
+
+</body>
+
+</html>

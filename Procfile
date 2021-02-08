@@ -1,0 +1,1 @@
+web: gunicorn InstaWin.wsgi --log-file -

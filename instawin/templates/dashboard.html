@@ -1,0 +1,241 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Dashboard {% endblock %}
+{% block body %}
+<!-- MAIN -->
+<div class="main">
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+        <div class="container-fluid">
+            <div class="panel panel-headline">
+                <div class="panel-heading">
+                    <h2 style="font-size:36px;" class="panel-title text-center">Color Game</h2>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+
+                        <div class="col-md-3">
+                            <div class="metric">
+                                <h4 class="text-center">Manual</h4>
+                                <form method="post">
+                                    {% csrf_token %}
+                                    {% for i in res %}
+                                    <input type="text" name="resultt1" value="{{i.resultt1}}" style="text-align: center;"><br>
+                                    <input type="submit" value="Enter" class="btn btn-success" style="margin-top:5%;">
+                                    {% endfor %}
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="metric">
+                                <h4 class="text-center">Game Id</h4>
+                                {% for i in gid %}
+                                <h5 class="text-center">{{i.id}}</h5>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="metric">
+                                <h4 class="text-center">Time</h4>
+                                {% for i in tim %}
+                                <h5 class="text-center">{{i.timed}}</h5>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="metric">
+                                <h4 class="text-center">Old result</h4>
+                                <h5 class="text-center">35%</h5>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="metric">
+                                <h4 class="text-center">Total Money</h4>
+                                <h5 class="text-center">35%</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-3"></div>
+                        <div class="metric col-md-1" style="background-color:grey">
+                            <h2 style="color:white; font-size:3rem;">1</h2>
+                        </div>
+                        <div class="metric col-md-2 bg-dark">
+                            <h4>₹ {{total_paid1}}</h4>
+
+                            <h5>Users: {{ us_co }}</h5>
+
+                        </div>
+
+                        <div class="metric col-md-1" style="margin-left:3rem; background-color:grey">
+                            <h2 style="color:white; font-size:3rem;">2</h2>
+                        </div>
+                        <div class="metric col-md-2 bg-dark">
+                            <h4>₹ {{total_paid2}}</h4>
+                            <h5>Users: {{ us_co }}</h5>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="panel panel-headline">
+                <div class="panel-heading">
+                    <h3 style="font-size:36px;" class="panel-title text-center">Number And Picture Game</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-2">
+                            <div class="metric">
+                                <h4 class="text-center">Manual</h4>
+                                <h5 class="text-center">1,252</h5>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="metric">
+                                <h4 class="text-center">Game Id</h4>
+                                <h5 class="text-center">203</h5>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="metric">
+                                <h4 class="text-center">Time</h4>
+                                <h5 class="text-center">274,678</h5>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="metric">
+                                <h4 class="text-center">Old result</h4>
+                                <h5 class="text-center">35%</h5>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="metric">
+                                <h4 class="text-center">Total Money</h4>
+                                <h5 class="text-center">35%</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                         <div class="metric col-md-1" style="background-color:grey">
+                            <h2 style="color:white; font-size:3rem;">1</h2>
+                        </div>
+                        <div class="metric col-md-2 bg-dark">
+                            <h4>₹</h4>
+                            <h5>Users: 0</h5>
+                        </div>
+
+                         <div class="metric col-md-1" style="margin-left:3rem; background-color:grey">
+                            <h2 style="color:white; font-size:3rem;">2</h2>
+                        </div>
+                        <div class="metric col-md-2 bg-dark">
+                            <h4>₹</h4>
+                            <h5>Users: 0</h5>
+                        </div>
+
+                        <div class="metric col-md-1" style="margin-left:3rem; background-color:grey">
+                            <h2 style="color:white; font-size:3rem;">3</h2>
+                        </div>
+                        <div class="metric col-md-2 bg-dark">
+                            <h4>₹</h4>
+                            <h5>Users: 0</h5>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                         <div class="metric col-md-1" style="background-color:grey">
+                            <h2 style="color:white; font-size:3rem;">4</h2>
+                        </div>
+                        <div class="metric col-md-2 bg-dark">
+                            <h4>₹</h4>
+                            <h5>Users: 0</h5>
+                        </div>
+
+                         <div class="metric col-md-1" style="margin-left:3rem; background-color:grey">
+                            <h2 style="color:white; font-size:3rem;">5</h2>
+                        </div>
+                        <div class="metric col-md-2 bg-dark">
+                            <h4>₹</h4>
+                            <h5>Users: 0</h5>
+                        </div>
+
+                        <div class="metric col-md-1" style="margin-left:3rem; background-color:grey">
+                            <h2 style="color:white; font-size:3rem;">6</h2>
+                        </div>
+                        <div class="metric col-md-2 bg-dark">
+                            <h4>₹</h4>
+                            <h5>Users: 0</h5>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                         <div class="metric col-md-1" style="background-color:grey">
+                            <h2 style="color:white; font-size:3rem;">7</h2>
+                        </div>
+                        <div class="metric col-md-2 bg-dark">
+                            <h4>₹</h4>
+                            <h5>Users: 0</h5>
+                        </div>
+
+                         <div class="metric col-md-1" style="margin-left:3rem; background-color:grey">
+                            <h2 style="color:white; font-size:3rem;">8</h2>
+                        </div>
+                        <div class="metric col-md-2 bg-dark">
+                            <h4>₹</h4>
+                            <h5>Users: 0</h5>
+                        </div>
+
+                        <div class="metric col-md-1" style="margin-left:3rem; background-color:grey">
+                            <h2 style="color:white; font-size:3rem;">9</h2>
+                        </div>
+                        <div class="metric col-md-2 bg-dark">
+                            <h4>₹</h4>
+                            <h5>Users: 0</h5>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                         <div class="metric col-md-1" style="background-color:grey">
+                            <h2 style="color:white; font-size:3rem;">0</h2>
+                        </div>
+                        <div class="metric col-md-2 bg-dark">
+                            <h4>₹</h4>
+                            <h5>Users: 0</h5>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="clearfix"></div>
+
+{% ifequal error "no" %}
+<script>
+    alert('Result Added Successfully!');
+    window.location=('{% url 'dashboard' %}');
+</script>
+{% endifequal %}
+
+{% ifequal error "yes" %}
+<script>
+    alert('Something went wrong , Try Again');
+</script>
+{% endifequal %}
+
+{% endblock %}
