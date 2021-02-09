@@ -30,7 +30,7 @@
                             <div class="metric">
                                 <h4 class="text-center">Game Id</h4>
                                 {% for i in gid %}
-                                <h5 class="text-center">{{i.id}}</h5>
+                                <h5 class="text-center">E{{i.id}}</h5>
                                 {% endfor %}
                             </div>
                         </div>
@@ -45,13 +45,17 @@
                         <div class="col-md-2">
                             <div class="metric">
                                 <h4 class="text-center">Old result</h4>
-                                <h5 class="text-center">35%</h5>
+                                {% for i in lgid %}
+                                <h5 class="text-center">{{i.resultt1}}</h5>
+                                {% endfor %}
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="metric">
                                 <h4 class="text-center">Total Money</h4>
-                                <h5 class="text-center">35%</h5>
+                                {% for i in us_co %}
+                                <h5 class="text-center">₹ {{i.Tamount}}</h5>
+                                {% endfor %}
                             </div>
                         </div>
                     </div>
@@ -64,9 +68,11 @@
                             <h2 style="color:white; font-size:3rem;">1</h2>
                         </div>
                         <div class="metric col-md-2 bg-dark">
-                            <h4>₹ {{total_paid1}}</h4>
+                            {% for i in us_co %}
+                            <h4>₹ {{i.Amount1}}</h4>
 
-                            <h5>Users: {{ us_co }}</h5>
+                            <h5>Users: {{i.User1}}</h5>
+                            {% endfor %}
 
                         </div>
 
@@ -74,8 +80,10 @@
                             <h2 style="color:white; font-size:3rem;">2</h2>
                         </div>
                         <div class="metric col-md-2 bg-dark">
-                            <h4>₹ {{total_paid2}}</h4>
-                            <h5>Users: {{ us_co }}</h5>
+                            {% for i in us_co %}
+                            <h4>₹ {{i.Amount2}}</h4>
+                            <h5>Users: {{i.User2}}</h5>
+                            {% endfor %}
                         </div>
                     </div>
 
@@ -236,6 +244,7 @@
 <script>
     alert('Something went wrong , Try Again');
 </script>
+
 {% endifequal %}
 
 {% endblock %}

@@ -22,3 +22,11 @@ class tblAGameone(models.Model):
     Bid1 = models.CharField(max_length=600)
     Bid2 = models.CharField(max_length=600)
     BidResult =  models.CharField(max_length=600)
+
+class tbltempdata(models.Model):
+    GameId = models.CharField(max_length=600)
+    User1 = models.CharField(max_length=600)
+    User2 = models.CharField(max_length=600)
+    Amount1 = models.CharField(max_length=600)
+    Amount2 = models.CharField(max_length=600)
+    Tamount = models.CharField(max_length=600)
